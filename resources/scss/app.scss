@@ -1,47 +1,88 @@
-@use './partials/_variables.scss' as *;
+@use './partials/variables' as *;
 
 $fa-font-path: "../webfonts" !default;
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/regular.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-@import "~bootstrap/scss/bootstrap.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '~bootstrap/scss/bootstrap';
 
-header{
-    display: flex;
-    justify-content: space-between;
+h1 {
+    color: $text-color;
 }
 
-img{
-    padding: 20px;
-    width: 120px;
-}
-
-nav{
-    align-content: center;
-
-    ul{
+nav {
+    ul {
+        gap: 20px;
         list-style: none;
-        display: flex;
-
-        li{
-            margin: 0 13px;
-            a{
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 500;
-                color: $headertext;
-                padding-bottom: 53px;
-                
-                &:hover{
-                    transition: 0.1s;
-                    border-bottom: 5px solid $bluetext;
-                    color: $bluetext;
-                }
-            }
-        }
+        text-transform: uppercase;
+        margin: 1rem
     }
+
+    img {
+        width: 50px;
+
+    }
+a {
+    text-decoration: none;
+    color: rgb(51, 50, 50);
+    
+}
+}
+
+footer {
+    background-image: url('../images/footer-bg.jpg');
+    color: white;
+
+    .footer-menu {
+        gap: 20px;
+
+    }
+
+    h2 {
+        text-transform: uppercase;
+        margin-top: 50px;
+       
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0px;
+       
+    }
+}
+
+.jumbotron {
+    background-image: url('../images/jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 400px;
+}
+
+.active {
+    color: rgb(77, 77, 203);
+    font-size: large;
+    font-weight: 500;
+}
+
+.gallery-comics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 1200px;
+    margin: 30px auto;
+   div { width: calc(100% / 6 - 15px);
+
+    img {
+        
+     aspect-ratio: 1/1;
+        object-fit: cover;
+      width: 100%;
+      object-position: top;
+        
+    }}
+
+    
 }

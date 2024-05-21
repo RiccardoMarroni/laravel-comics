@@ -3,8 +3,11 @@
 @section('title', 'Home')
 
 @section('content')
-<section class="container">
-    
-</section>
+<main>
+   <div class="jumbotron">
+
+   </div>
+   
+</main>
 
 @endsection
